@@ -1,1 +1,44 @@
+body {
+  background: #3333FF;
+}
+.container {
+  background: white;
+  text-align: center;
+
+  margin: auto;
+  margin-top: 70px;
+  
+  width: 800px;
+  height: 400px;
+  border-radius: 10px;
+
+  font: normal 10pt Arial;
+}
+h1 {
+
+}
+#item1 {
+  float: left;
+  width: 590px;
+  height: 325px;
+
+  margin-left: 10px;
+}
+#item2 {
+  float: right;
+  width: 200px;
+  height: 325px;
+
+	flex-direction: column;
+}
+button {
+  width: 160px;
+  height: 109px;
+
+  border-radius: 10px;
+}
+footer {
+
+}
+
 
