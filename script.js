@@ -1,3 +1,5 @@
+var result = document.querySelector('#item1')
+
 var button1 = document.querySelectorAll('button')[0];
 var button2 = document.querySelectorAll('button')[1];
 var button3 = document.querySelectorAll('button')[2];
@@ -7,10 +9,23 @@ button2.addEventListener('click', horas);
 button3.addEventListener('click', botao3);
 
 function curi() {
-  //button1.textContent = 'Clicado';
+  result.innerHTML = '<h2>Clique nos botões ao lado</h2><p>Lorem Ipsum sit amet dolor</p>'
+  let cont = 1;
+  switch () {
+    case 1:
+        break
+    case 2:
+        break
+    case 3:
+        break
+    default:
+  }
   document.querySelector('p').textContent = 'Lorem ipsum sit amet';
 }
 function horas() {
+  result.innerHTML = '<h2>Clique nos botões ao lado</h2><p>Lorem Ipsum sit amet dolor</p>'
+  let img = document.createElement('img');
+  //img.innerHTML = '';
   let meses = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
   let diaSem = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
   let data = new Date();
@@ -32,7 +47,20 @@ function horas() {
   }
   //resultado
   document.querySelector('p').textContent = `Hoje é ${diaSem[dataHj[2]]}, dia ${dataHj[3]} de ${meses[dataHj[4]]} de ${dataHj[5]}, às ${dataHj[0]}:${dataHj[1]}.`;
-  console.log(`Hoje é ${diaSem[dataHj[2]]}, dia ${dataHj[3]} de ${meses[dataHj[4]]} de ${dataHj[5], às ${dataHj[0]}:${dataHj[1]}.`);
+  console.log(`Hoje é ${diaSem[dataHj[2]]}, dia ${dataHj[3]} de ${meses[dataHj[4]]} de ${dataHj[5]}, às ${dataHj[0]}:${dataHj[1]}.`);
+  //imagens
+  if (dataHj[0] < 12) {
+    img.setAttribute('src', ' ');
+    img.setAttribute('src', 'fotomanha.png');
+    
+  } else if (dataHj[0] < 18) {
+    img.setAttribute('src', 'fototarde.png');
+  } else {
+    img.setAttribute('src', 'fotonoite.png');
+  }
+  result.appendChild(img);
+  img.style.width = '25%';
+  img.style.height = 'auto';
 }
 function botao3 () {
   //button3.textContent = 'Clicado';
