@@ -1,6 +1,8 @@
 var result = document.querySelector('#item1')
 
 var button1 = document.querySelectorAll('button')[0];
+var cont = 1; //contagem de cliques
+
 var button2 = document.querySelectorAll('button')[1];
 var button3 = document.querySelectorAll('button')[2];
 
@@ -10,17 +12,22 @@ button3.addEventListener('click', botao3);
 
 function curi() {
   result.innerHTML = '<h2>Clique nos botões ao lado</h2><p>Lorem Ipsum sit amet dolor</p>'
-  let cont = 1;
-  switch () {
+  switch (cont) {
     case 1:
+        document.querySelector('p').textContent = 'O cérebro humano possui 2,5 petabytes de armazenamento (O que equivale a 1 milhão de gigabytes).';
         break
     case 2:
+        document.querySelector('p').textContent = 'Ursos polares são praticamente invisíveis para câmeras de calor.';
         break
     case 3:
+        document.querySelector('p').textContent = 'O Brasil possui quatro fusos horários.';
         break
     default:
   }
-  document.querySelector('p').textContent = 'Lorem ipsum sit amet';
+  cont ++;
+  if (cont == 4) {
+    cont = 1;
+  }
 }
 function horas() {
   result.innerHTML = '<h2>Clique nos botões ao lado</h2><p>Lorem Ipsum sit amet dolor</p>'
