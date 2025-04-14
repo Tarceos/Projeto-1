@@ -70,6 +70,10 @@ function horas() {
   img.style.height = 'auto';
 }
 function botao3 () {
-  //button3.textContent = 'Clicado';
-  document.querySelector('p').textContent = 'Lorem ipsum sit amet';
+  if (button3.textContent == 'Modo Escuro') {
+    document.body.style.background = 'black';
+    document.body.style.color = 'white';
+    document.querySelector('.container').style.background = '#111111';
+    
+  }
 }

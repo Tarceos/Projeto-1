@@ -29,13 +29,18 @@ h1 {
   width: 200px;
   height: 325px;
 
+  gap: 1000px;
 	flex-direction: column;
 }
 button {
+  background: lightgray;
   width: 160px;
-  height: 109px;
+  height: 100px;
+  
+  border: 0px;
+  border-radius: 25px;
 
-  border-radius: 10px;
+  margin-top: 5px;
 }
 footer {
 
