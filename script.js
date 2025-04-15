@@ -11,7 +11,13 @@ button2.addEventListener('click', horas);
 button3.addEventListener('click', botao3);
 
 function curi() {
-  result.innerHTML = '<h2>Clique nos botões ao lado</h2><p>Lorem Ipsum sit amet dolor</p>'
+  result.innerHTML = '<h2>Clique nos botões ao lado</h2><p></p>'
+  let img = document.createElement('img');
+  img.setAttribute('src', 'fotocuriosidade.png');
+  result.appendChild(img);
+  img.style.width = '25%';
+  img.style.height = 'auto';
+
   switch (cont) {
     case 1:
         document.querySelector('p').textContent = 'O cérebro humano possui 2,5 petabytes de armazenamento (O que equivale a 1 milhão de gigabytes).';
@@ -30,7 +36,7 @@ function curi() {
   }
 }
 function horas() {
-  result.innerHTML = '<h2>Clique nos botões ao lado</h2><p>Lorem Ipsum sit amet dolor</p>'
+  result.innerHTML = '<h2>Clique nos botões ao lado</h2><p></p>'
   let img = document.createElement('img');
   //img.innerHTML = '';
   let meses = ['JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN', 'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ'];
@@ -57,9 +63,7 @@ function horas() {
   console.log(`Hoje é ${diaSem[dataHj[2]]}, dia ${dataHj[3]} de ${meses[dataHj[4]]} de ${dataHj[5]}, às ${dataHj[0]}:${dataHj[1]}.`);
   //imagens
   if (dataHj[0] < 12) {
-    img.setAttribute('src', ' ');
     img.setAttribute('src', 'fotomanha.png');
-    
   } else if (dataHj[0] < 18) {
     img.setAttribute('src', 'fototarde.png');
   } else {
@@ -70,6 +74,27 @@ function horas() {
   img.style.height = 'auto';
 }
 function botao3 () {
-  //button3.textContent = 'Clicado';
-  document.querySelector('p').textContent = 'Lorem ipsum sit amet';
+  if (button3.textContent == 'Modo Escuro') {
+    document.body.style.background = 'black';
+    document.body.style.color = 'white';
+    document.querySelector('.container').style.background = '#111111';
+    button1.style.background = '#272727';
+    button2.style.background = '#272727';
+    button3.style.background = '#272727';
+    button1.style.color = 'white';
+    button2.style.color = 'white';
+    button3.style.color = 'white';
+    button3.textContent = 'Modo Claro';
+  } else {
+    document.body.style.background = '#3333FF';
+    document.body.style.color = 'black';
+    document.querySelector('.container').style.background = 'white';
+    button1.style.background = 'lightgray';
+    button2.style.background = 'lightgray';
+    button3.style.background = 'lightgray';
+    button1.style.color = 'black';
+    button2.style.color = 'black';
+    button3.style.color = 'black';
+    button3.textContent = 'Modo Escuro';
+  }
 }
