@@ -14,9 +14,6 @@ body {
 
   font: normal 10pt Arial;
 }
-h1 {
-
-}
 #item1 {
   float: left;
   width: 590px;
@@ -29,7 +26,6 @@ h1 {
   width: 200px;
   height: 325px;
 
-  gap: 1000px;
 	flex-direction: column;
 }
 button {
@@ -42,8 +38,3 @@ button {
 
   margin-top: 5px;
 }
-footer {
-
-}
-
-
